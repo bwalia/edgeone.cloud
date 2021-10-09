@@ -1,1 +1,1 @@
-# edgeone.cloud
+# Edgeone Infra Notes

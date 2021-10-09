@@ -1,0 +1,15 @@
+dyn_o_mite:
+  datacenter: dc-eu-west-1
+  rack: pop-eu-west-1
+  dyn_listen: 0.0.0.0:8101
+  dyn_seeds:
+  - #REMOTE_POP_REDIS_IP#:8101:pop-ap-southeast-2:dc:1383429731
+  listen: 0.0.0.0:8102
+  servers:
+  - 127.0.0.1:6379:1
+  tokens: '1383429731'
+  secure_server_option: datacenter
+  data_store: 0
+  read_consistency : DC_SAFE_QUORUM
+  write_consistency : DC_SAFE_QUORUM
+  stats_listen: 0.0.0.0:22221

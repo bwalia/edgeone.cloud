@@ -1,0 +1,18 @@
+{
+  "Comment": "Update Route53 zone with the new lb endpoint for Edge global POP domains for diff apps",
+  "Changes": [
+      {
+        "Action": "UPSERT",
+        "ResourceRecordSet": {
+          "Name": "global.edgeone.cloud",
+          "Type": "A",
+          "TTL": 60,
+          "ResourceRecords": [
+            {
+              "Value": "#ELB_HOSTNAME_ENDPOINT#"
+            }
+          ]
+        }
+      }
+  ]
+}
