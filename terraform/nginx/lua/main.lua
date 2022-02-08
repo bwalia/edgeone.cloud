@@ -42,7 +42,7 @@ local host_is_valid = false
                 --     return
                 ngx.header.content_type = "text/html"
                 ngx.status = 403
-                ngx.say("Forbidden host is not found")
+                ngx.say("Error: Forbidden the host " .. host_header .. " validation failed.")
                 return ngx.exit(403)
 
                 end
@@ -52,7 +52,7 @@ local host_is_valid = false
                     -- return
                     ngx.header.content_type = "text/html"
                     ngx.status = 403
-                    ngx.say("Forbidden host is not found")
+                    ngx.say("Error: Forbidden the host " .. host_header .. " validation failed.")
                     return ngx.exit(403)
 
                 else
